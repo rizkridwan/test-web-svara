@@ -14,14 +14,50 @@
   }
 
   /* buat CSS di disini */
+  body>div{
+    width:100%;
+    height: 20px;
+  }
+  .merah{
+    background-color: #FF0900;
+  }
+  .orange{
+    background-color: #FF7F00;
+  }
+  .kuning{
+    background-color: #FFEF00;
+  }
+  .hijau{
+    background-color: #00F11D;
+  }
+  .biru{
+    background-color: #0079FF;
+  }
+  .ungu{
+    background-color: #A800FF;
+  }
 </style>
 
 <body>
-  <div>Buat pelangi di sini</div>
+  <div id="pelangi">Buat pelangi di sini</div>
+  
+  
+
 </body>
 
 <script>
-  // buat script disini
+
+var arrWarna=["merah","orange","kuning","hijau","biru","ungu"];
+
+setInterval(function() {
+    let e="";
+    for(var i=0;i<arrWarna.length;i++){
+      e +="<div class="+arrWarna[i]+"></div>";
+       
+    }
+    document.write(e);
+    
+}, 100);
 </script>
 
 </html>

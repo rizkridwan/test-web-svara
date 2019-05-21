@@ -14,5 +14,10 @@ function membuatObject() {
 
   //tempat coding disini
 
+  objectSaya.nama="Muhammad Rizky Ridwan Fauzi";
+  objectSaya.alamat="Bandung";
+  objectSaya.hobi="Memainkan Alat Musik";
+  objectSaya.hp="082126598823";
+
   return objectSaya;
 }
