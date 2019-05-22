@@ -14,7 +14,7 @@
   }
 
   /* buat CSS di disini */
-  body>div{
+  body div{
     width:100%;
     height: 20px;
   }
@@ -36,28 +36,36 @@
   .ungu{
     background-color: #A800FF;
   }
+  #pelangi{
+    width:100%;
+  }
 </style>
 
 <body>
-  <div id="pelangi">Buat pelangi di sini</div>
-  
+  <div>Buat pelangi di sini</div>
+  <div id="pelangi"></div> 
   
 
 </body>
 
 <script>
-
 var arrWarna=["merah","orange","kuning","hijau","biru","ungu"];
 
-setInterval(function() {
-    let e="";
-    for(var i=0;i<arrWarna.length;i++){
-      e +="<div class="+arrWarna[i]+"></div>";
-       
-    }
-    document.write(e);
+
+setInterval(changeColor,100);
+function changeColor(){
+  var x=document.getElementById("pelangi");
+  
+  var e="";
+  for(var i=0;i<arrWarna.length;i++){
+     e+="<div class="+arrWarna[i]+"></div>";
     
-}, 100);
+  }
+  x.innerHTML=e;
+  arrWarna.unshift(arrWarna[5]);
+  arrWarna.pop();
+}
+
 </script>
 
 </html>
